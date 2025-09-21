@@ -18,10 +18,13 @@ So far I have sighted:
  ```
 Actually even better would be to later display it:
 ```
-pdflatex -output-directory=output <FILE>.tex && firefox output/<FILE>.pdf
+pdflatex -output-directory=output doc03.tex && firefox output/doc03.pdf
 ```
  # Terminology
  - Things that use \\begin or \\end are called an **environment**.
  
  - The area before our *document* environment is called **preamble**
 
+ - Sections, Subsections and paragraphs 
+   (paragr. are not numbered and similar to bold text but only the heading is bold)
+   
