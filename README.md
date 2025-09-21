@@ -18,7 +18,7 @@ So far I have sighted:
  ```
 Actually even better would be to later display it:
 ```
-pdflatex -output-directory=output doc04.tex && firefox output/doc04.pdf
+pdflatex -output-directory=output doc05.tex && firefox output/doc05.pdf
 ```
  # Terminology
  - Things that use \\begin or \\end are called an **environment**.
@@ -27,9 +27,12 @@ pdflatex -output-directory=output doc04.tex && firefox output/doc04.pdf
 
  - Sections, Subsections and paragraphs 
    (paragr. are not numbered and similar to bold text but only the heading is bold)
-# Math
 
+# Math
  - non-numbered equations go with asterisk, multiline equations are aligned at ampersand symbol
  - matrices are done using matrix environment and braced using \\left\[ and \\right\]
  
-
+ # Images
+ - images are inserted inside figure environment to position and number them correctly using the `\includegraphics[width=\linewidth]{<file>}` command :-)
+ - figure positioning is done at `\begin{figure}[h!]` to place the image exaclty here. Also t(op) b(ottom) of the page or an extra p(age) can be used.
+ - subfigures are a code intense business but great for diagram comparison. To title them you need the `subcaption` package so that you simply can youse `\caption` inside the subfigure environment.  
