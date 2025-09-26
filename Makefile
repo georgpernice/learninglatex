@@ -1,14 +1,18 @@
+SHELL := /bin/bash
+.SHELLFLAGS := -O extglob -c
+compile-once:
+	
+	pdflatex doc07.tex && evince doc07.pdf
+compile-twice:
+	pdflatex doc07.tex && pdflatex doc07.tex && evince doc07.pdf
+
 build:
-	
-	pdflatex -output-directory=output doc07.tex && evince output/doc07.pdf
-twice:
-	
-	pdflatex -output-directory=output doc07.tex && pdflatex -output-directory=output doc07.tex && evince output/doc07.pdf
+	pdflatex doc07.tex
 
-all:
-	bibtex output/doc07
+	bibtex doc07
 
-	pdflatex -output-directory=output doc07.tex && pdflatex -output-directory=output doc07.tex && evince output/doc07.pdf
+	pdflatex doc07.tex && pdflatex doc07.tex && evince doc07.pdf
 
-
+del:
+	rm doc07!(*.tex) # && rm texput.log
 

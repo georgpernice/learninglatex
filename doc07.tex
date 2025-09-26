@@ -5,6 +5,8 @@
 %PKGS
 \usepackage{setspace}
 \usepackage{graphicx}
+\usepackage[backend=bibtex,style=verbose-trad2]{biblatex}
+\bibliography{bibfile}
 
 \title{Outstanding Commitment Issues}
 \author{Git Foundation}
@@ -13,7 +15,7 @@
 
 %DOCUMENT
 \begin{document}
-\bibliographystyle{ieeetr}
+% \bibliographystyle{ieeetr} % only when using bibtex without LA
 
 \maketitle
 \newpage
@@ -28,10 +30,11 @@ Empty Cs are the worst.
 \section {Bad Commit Msges}
 Happens to everybody.
 \section {Cool Commits}
-Done using squashybuashy.
-
-\bibliography{bibfile}
+Done using squashybuashy. Using autocite it looks like \autocite[44]{DUMMY:1} here.
+% \bibliography{bibfile} % using pure bibtex without LA it will be here but biblatex needs it below pkgs
+\printbibliography
 \end{document}
+
 
 
 
