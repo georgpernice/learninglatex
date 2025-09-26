@@ -35,4 +35,7 @@ pdflatex -output-directory=output doc05.tex && firefox output/doc05.pdf
  # Images
  - images are inserted inside figure environment to position and number them correctly using the `\includegraphics[width=\linewidth]{<file>}` command :-)
  - figure positioning is done at `\begin{figure}[h!]` to place the image exaclty here. Also t(op) b(ottom) of the page or an extra p(age) can be used.
- - subfigures are a code intense business but great for diagram comparison. To title them you need the `subcaption` package so that you simply can youse `\caption` inside the subfigure environment.  
+ - subfigures are a code intense business but great for diagram comparison. To title them you need the `subcaption` package so that you simply can youse `\caption` inside the subfigure environment. 
+ - Spacing can be modified to `\singlespacing` or `\doublespacing` using the `setspace` package :-)
+ - tocdepth for the table of contents can be configured setting a counter using `setcounter{tocdepth}{2}` for example to hide some subsubsections if necessary
+ 
